@@ -32,6 +32,44 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
  * EOI = End Or Identify
   
 
+### GPIB State Analysis
+If you set in __attributes window__ the __debug flag__ to True, you will get in the terminal the following print, like a ## ## State Analysis
+`
+start GPIB decoder
+     0; 3F;  63; UNL ;
+     9; 5F;  95; UNT ;
+    18; 24;  36; L4  ;
+    25; 49;  73; I   ;
+  4031; 44;  68; D   ;
+  5843; 0A;  10; LF  ; EOI
+  5852; 3F;  63; UNL ;
+  5860; 5F;  95; UNT ;
+  5869; 44;  68; T4  ;
+ 14830; 48;  72; H   ;
+ 15417; 50;  80; P   ;
+ 15536; 31;  49; 1   ;
+ 15656; 36;  54; 6   ;
+ 15775; 33;  51; 3   ;
+ 15895; 31;  49; 1   ;
+ 16106; 44;  68; D   ; EOI
+ 16123; 3F;  63; UNL ;
+ 16130; 5F;  95; UNT ;
+`
+The __data colums__ are: 
+ * sample number, in our case * 2µs = [µs], total session length = 40,000 µs
+ * data byte in hexadecimal
+ * data byte in decimal
+ * ASCII or gpib decoding
+ * EOI flag
+
+The __logic__ of the GPIB session is:
+ * Controller set the GPIB to UNLISTEN and UNTALK (neutral state)
+ * Controller set Device with GPIB address number 4 to LISTEN
+ * Controller send command 'ID LF+EOI' to Device with GPIB address number 4 (request Idendity string)
+ * Controller set the GPIB to UNLISTEN and UNTALK (neutral state)
+ * Controller set Device with GPIB address number 4 to TALK
+ * Device with GPIB address number 4 send the ID string 'HP1631D+EOI' to Controller
+ * Controller set the GPIB to UNLISTEN and UNTALK (neutral state)
   
 
 
