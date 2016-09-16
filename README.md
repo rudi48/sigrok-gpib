@@ -13,7 +13,7 @@ The third picture shows the whole GPIB session: command ID, answer HP1631D.
 ![gpib session] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_940.png)
 
 This is the sigrok decoder attribute mask.
-![gpib decoder attribute mask] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_940.png)
+![gpib decoder attribute mask] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png)
 
 
 Installation
