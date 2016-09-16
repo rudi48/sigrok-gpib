@@ -34,7 +34,7 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
 
 ### GPIB State Analysis
 If you set in __attributes window__ the __debug flag__ to True, you will get in the terminal the following print, like a 
-__State Analysis__.
+__State Analysis__:
 ```
 start GPIB decoder
      0; 3F;  63; UNL ;
@@ -73,8 +73,7 @@ The __logic__ of the GPIB session is:
  * Controller set the GPIB to UNLISTEN and UNTALK (neutral state)
   
 
-
-Installation
+Installation for Linux
 ------------
 ```
 mkdir -p ~/.local/share/libsigrokdecode/decoders
