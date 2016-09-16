@@ -4,7 +4,7 @@ sigrok decoder gpib for 16 bit logic analyzer
 For GPIB (General Purpose Interface Bus, or HPIB, or IEEE488; 16 bits parallel) analysis, used with a Saleae Logic16 clone.
 
 The first picture shows in detail the GPIB handshake. 
-![gpib handshake] (sigrok-gpib/sigrok_decoder_gpib_handshake-940.png)
+![gpib handshake] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/sigrok_decoder_gpib_handshake-940.png)
 
 ![PulseView start](https://raw.githubusercontent.com/vooon/sigrok-rgb_led_ws281x/master/pulseview-start.png)
 
@@ -13,7 +13,6 @@ The first picture shows in detail the GPIB handshake.
 
 Installation
 ------------
-
 ```
 mkdir -p ~/.local/share/libsigrokdecode/decoders
 cd ~/.local/share/libsigrokdecode/decoders
