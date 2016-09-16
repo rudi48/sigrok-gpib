@@ -74,9 +74,10 @@ The __logic__ of the GPIB session is:
   
 
 Installation for Linux
-------------
 ```
 mkdir -p ~/.local/share/libsigrokdecode/decoders
 cd ~/.local/share/libsigrokdecode/decoders
 git clone https://github.com/rudi48/sigrok-gpib.git gpib
 ```
+
+[More information you will find on my homepage](http://www.rudiswiki.de/wiki9/SigrokDecoderGPIB)
