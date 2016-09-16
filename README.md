@@ -81,6 +81,9 @@ git clone https://github.com/rudi48/sigrok-gpib.git gpib
 
 # the details of the decoder "gpib" can be shown with:
 $  sigrok-cli --protocol-decoders gpib --show
+
+# the samples pictures are made with the session file:
+$ pulseview -i hp1631ID.sr
 ```
 
-[More information you will find on my homepage](http://www.rudiswiki.de/wiki9/SigrokDecoderGPIB)
+[More information about you will find on my homepage](http://www.rudiswiki.de/wiki9/SigrokDecoderGPIB)
