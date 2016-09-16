@@ -29,7 +29,7 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
  * UNT = UNTALK
  * LF = LineFeed (end of line)
  * EOI = End Or Identify
-![gpib decoder attribute mask] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png)
+![alt text] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png)
 
 
 Installation
