@@ -30,7 +30,6 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
  * LF = LineFeed (end of line)
  * EOI = End Or Identify
   
- ![gpib attributes] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png)
 <img align="right" src="https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png">
   
 
