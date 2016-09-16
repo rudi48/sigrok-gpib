@@ -33,8 +33,10 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
   
 
 ### GPIB State Analysis
-If you set in __attributes window__ the __debug flag__ to True, you will get in the terminal the following print, like a ## ## State Analysis
-`
+If you set in __attributes window__ the __debug flag__ to True, you will get in the terminal the following print, like a 
+
+## State Analysis
+```
 start GPIB decoder
      0; 3F;  63; UNL ;
      9; 5F;  95; UNT ;
@@ -54,7 +56,7 @@ start GPIB decoder
  16106; 44;  68; D   ; EOI
  16123; 3F;  63; UNL ;
  16130; 5F;  95; UNT ;
-`
+```
 The __data colums__ are: 
  * sample number, in our case * 2µs = [µs], total session length = 40,000 µs
  * data byte in hexadecimal
