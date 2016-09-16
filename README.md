@@ -12,6 +12,7 @@ The second picture shows in detail the last 4 bytes, notice the EOI signal at th
 The third picture shows the whole GPIB session: command ID, answer HP1631D. 
 ![gpib session] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_940.png)
 
+<img align="right" src="https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png">
 On the right you see a __picture__ of the '''gpib''' decoder __attributes__, seen when you click on the flag __gpib__ on the left in the __picture__ above.
 
 The following is important:
@@ -30,7 +31,7 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
  * LF = LineFeed (end of line)
  * EOI = End Or Identify
   
-<img align="right" src="https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png">
+
   
 
 
