@@ -79,13 +79,10 @@ mkdir -p ~/.local/share/libsigrokdecode/decoders
 cd ~/.local/share/libsigrokdecode/decoders
 git clone https://github.com/rudi48/sigrok-gpib.git gpib
 
-# the details of the decoder "gpib" can be shown with:
-$  sigrok-cli --protocol-decoders gpib --show
-
 # the samples pictures are made with the session file:
 $ pulseview -i hp1631ID.sr
 
-# a quick test for a good installation is:
+# a quick test for a good installation, and showing the parameters is:
 $  sigrok-cli --protocol-decoders gpib --show
 ID: gpib
 Name: gpib
