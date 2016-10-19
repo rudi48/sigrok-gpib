@@ -33,7 +33,7 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
   
 
 ### GPIB State Analysis
-If you set in __attributes window__ the __debug flag__ to True, you will get in the terminal the following print, like a 
+If you set in __attributes window__ the __state analysis flag__ to True, you will get in the terminal the following print, like a 
 __State Analysis__:
 ```
 GPIB State Analysis
