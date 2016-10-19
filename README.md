@@ -1,7 +1,7 @@
 # sigrok-gpib
 sigrok decoder gpib for 16 bit logic analyzer
 
-For GPIB (General Purpose Interface Bus, or HPIB, or IEEE488; 16 bits parallel) analysis, used with a Saleae Logic16 clone.
+For GPIB (General Purpose Interface Bus, or HPIB, or IEEE488; 16 bits parallel) protocol analysis, used with a Saleae Logic16 clone.
 
 The first picture shows in detail the GPIB handshake. 
 ![gpib handshake] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_gpib_handshake-940.png)
@@ -36,7 +36,7 @@ A short explanation for the GPIB command decoding, when line __ATN__ was active:
 If you set in __attributes window__ the __debug flag__ to True, you will get in the terminal the following print, like a 
 __State Analysis__:
 ```
-start GPIB decoder
+GPIB State Analysis
      0; 3F;  63; UNL ;
      9; 5F;  95; UNT ;
     18; 24;  36; L4  ;
@@ -85,59 +85,49 @@ $ pulseview -i hp1631ID.sr
 # a quick test for a good installation, and showing the parameters is:
 $  sigrok-cli --protocol-decoders gpib --show
 ID: gpib
-Name: gpib
+Name: GPIB
 Long name: General Purpose Interface Bus
-Description: GPIB, HPIB, IEEE488.
+Description: IEEE-488 GPIB / HPIB protocol.
 License: gplv2+
 Annotation classes:
 - items: Items
 - gpib: DAT/CMD
 - eoi: EOI
 Annotation rows:
-- items (Bytes): items
+- bytes (Bytes): items
 - gpib (DAT/CMD): gpib
 - eoi (EOI): eoi
 Required channels:
-None.
+- d0 (D0): Data I/O bit 1, ch 0
+- d1 (D1): Data I/O bit 2, ch 1
+- d2 (D2): Data I/O bit 3, ch 2
+- d3 (D3): Data I/O bit 4, ch 3
+- d4 (D4): Data I/O bit 5, ch 4
+- d5 (D5): Data I/O bit 6, ch 5
+- d6 (D6): Data I/O bit 7, ch 6
+- d7 (D7): Data I/O bit 8, ch 7
+- eoi (EOI8): End or identify, ch 8
+- dav (DAV9): Data valid (clock), ch 9
+- nrfd (NRFD10): Not ready for data, ch 10
+- ndac (NDAC11): Not data accepted, ch 11
+- ifc (IFC12): Interface clear, ch 12
+- srq (SRQ13): Service request, ch 13
+- atn (ATN14): Attention, ch 14
+- ren (REN15): Remote enable, ch 15
 Optional channels:
-- clk (CLK): Clock line
-- d0 (D0): Data line 0
-- d1 (D1): Data line 1
-- d2 (D2): Data line 2
-- d3 (D3): Data line 3
-- d4 (D4): Data line 4
-- d5 (D5): Data line 5
-- d6 (D6): Data line 6
-- d7 (D7): Data line 7
-- EOI (EOI8): End Or Identify, 8
-- DAV (DAV): Clock, falling edge, 9
-- NRFD (NRFD): Not Ready For Data, 10
-- NDAC (NDAC): Not Data Accepted, 11
-- IFC (IFC): InerFace Clear, 12
-- SRQ (SRQ): Service ReQuest, 13
-- ATN (ATN): ATN,Command mode, 14
-- REN (REN): Remote ENable, 15
+None.
 Options:
-- sample_total: total number of samples (default 0)
-- debug: debug print ('False', 'True', default 'False')
+- sample_total: Total number of samples (default 0)
+- state: state analysis ('False', 'True', default 'False')
 Documentation:
-This protocol decoder can decode synchronous parallel buses with various
-number of data bits/channels and one (optional) clock line.
+This protocol decoder can decode the GPIB (IEEE-488) protocol.
 
-If no clock line is supplied, the decoder works slightly differently in
-that it interprets every transition on any of the supplied data channels
-like there had been a clock transition.
-
-It is required to use the lowest data channels, and use consecutive ones.
-For example, for a 4-bit sync parallel bus, channels D0/D1/D2/D3 (and CLK)
-should be used. Using combinations like D7/D12/D3/D15 is not supported.
-For an 8-bit bus you should use D0-D7, for a 16-bit bus use D0-D15 and so on.
-
-If the clock pin is set, GPIB decoding is shown.
+If the clock channel DAV is set, GPIB decoding is shown.
 
 If the total sample number is given, the last byte is shown.
 
-2016-09-14 GPIB decoding, Rudolf Reuter
+If option "state" is set "True", a GPIB "State Analysis" is printed
+in the terminal.
 ```
 
 [More information about you will find on my homepage](http://www.rudiswiki.de/wiki9/SigrokDecoderGPIB)
