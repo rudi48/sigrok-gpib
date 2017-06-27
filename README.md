@@ -5,18 +5,19 @@ For GPIB (General Purpose Interface Bus, or HPIB, or IEEE488; 16 bits parallel) 
 
 The first picture shows in detail the GPIB handshake. 
 
-![gpib handshake] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_gpib_handshake-940.png)
+![gpib handshake](https://github.com/rudi48/sigrok-gpib/blob/master/sigrok_decoder_gpib_handshake-940.png)
 
 The second picture shows in detail the last 4 bytes, notice the EOI signal at the last data byte.
 
-![gpib end of session] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_gpib_end-940.png)
+![gpib end of session](https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_gpib_end-940.png)
 
 The third picture shows the whole GPIB session: command ID, answer HP1631D. 
 
-![gpib session] (https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_940.png)
+![gpib session](https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_940.png)
 
 <img align="right" src="https://raw.githubusercontent.com/rudi48/sigrok-gpib/master/sigrok_decoder_GPIB_attributes-349.png">
-On the right you see a __picture__ of the '''gpib''' decoder __attributes__, seen when you click on the flag __gpib__ on the left in the __picture__ above.
+
+On the right you see a __picture__ of the __gpib__ decoder __attributes__, seen when you click on the flag __gpib__ on the left in the __picture__ above.
 
 The following is important:
  * total number of samples: must be set, in order to decode the last byte.
