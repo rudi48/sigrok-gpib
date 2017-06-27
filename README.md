@@ -134,4 +134,4 @@ If option "state" is set "True", a GPIB "State Analysis" is printed
 in the terminal.
 ```
 
-[More information about you will find in the wiki or on my homepage](http://www.rudiswiki.de/wiki9/SigrokDecoderGPIB)
+[More information about you will find in the "Github Wiki" or on my homepage](http://www.rudiswiki.de/wiki9/SigrokDecoderGPIB)
